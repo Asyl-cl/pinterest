@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinterest </title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      min-height: 100vh;
+    }
+    .shetki {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 70px;
+      padding: 15px 0;
+      border-right: 1px solid #ddd;
+      position: relative;
+    }
+
+    .shetki img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .shetki img:hover {
+      transform: scale(1.1);
+    }
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .header2 {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 25px;
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+      z-index: 10;
+    }
+
+    .header2 button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      background: #efefef;
+      border-radius: 30px;
+      padding: 10px 15px;
+      width: 100%;
+      max-width: 600px;
+      cursor: pointer;
+    }
+
+    .header2 button:hover {
+      background: #e4e4e4;
+    }
+
+    .header2 .poisk {
+      width: 20px;
+      height: 20px;
+    }
+
+    .header2 p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    .header2 .profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .vse {
+      display: flex;
+      gap: 20px;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+      background-color: #fff;
+    }
+
+    .vse p {
+      cursor: pointer;
+      font-weight: 600;
+      color: #555;
+      transition: color 0.2s;
+    }
+
+    .vse p:hover {
+      color: black;
+    }
+
+    .grid-container {
+      columns: 6 220px; 
+      column-gap: 15px;
+      padding: 15px 30px;
+    }
+
+    .grid-container div {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .grid-container div:hover {
+      transform: scale(1.02);
+    }
+
+    .grid-container img {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="shetki">
+    <img src="/images/photo_2025-10-23_01-14-57.jpg" class="logo">
+    <img src="/images/photo_2025-10-23_01-15-33.jpg" class="setka">
+    <img src="/images/photo_2025-10-23_01-15-45.jpg" class="plus">
+    <img src="/images/photo_2025-10-23_01-15-58.jpg" class="notifications">
+    <img src="/images/photo_2025-10-23_01-16-11.jpg" class="chat">
+    <img src="/images/photo_2025-10-23_01-16-26.jpg" class="settings">
+  </div>
+  <div class="main">
+    <div class="header2">
+      <button>
+        <img src="/images/photo_2025-10-23_01-20-17.jpg" class="poisk">
+        <p>Поиск</p>
+      </button>
+      <img src="/images/photo_2025-10-23_01-22-28.jpg" class="profile">
+    </div>
+
+    <div class="vse">
+      <p>Все</p>
+      <p>дизайн</p>
+      <p>смешные</p>
+    </div>
+
+    <div class="grid-container">
+      <div><img src="/images/6ea89b54-51f4-4837-96da-b806d369170b.jpg"></div>
+      <div><img src="/images/32f7c5a8-4643-47f3-a8b3-45b2cc74fbc7.jpg"></div>
+      <div><img src="/images/dexter silly.jpg"></div>
+      <div><img src="/images/Чокан Валиханов.jpg"></div>
+      <div><img src="/images/I am the rage bait.jpg"></div>
+      <div><img src="/images/c115c8f0-a6ad-4f50-9178-007963d5990c.jpg"></div>
+      <div><img src="/images/ed69dafb-d357-4fc6-9904-8cde6c2a227a.jpg"></div>
+      <div><img src="/images/How to Add Rim Light With Gradient Map _ Photoshop Tutorial.jpg"></div>
+      <div><img src="/images/Legion.jpg"></div>
+      <div><img src="/images/d9512ef0-c516-4402-9f8d-dc3ef28b30c3.jpg"></div>
+      <div><img src="/images/Бесплатные шрифты.jpg"></div>
+      <div><img src="/images/28b8fbf3-833b-4ddf-979c-535504b0f6cd.jpg"></div>
+      <div><img src="/images/anonymous _ black & white _.jpg"></div>
+      <div><img src="/images/How to Build Meaningful Relationships Through Online Dating.jpg"></div>
+      <div><img src="/images/Alash Orda _ Kazakhstan.jpg"></div>
+      <div><img src="/images/Autumn Poster Design — COZY TIME.jpg"></div>
+      <div><img src="/images/193c85a0-b087-4aa3-b8cd-1b9812c531bb.jpg"></div>
+      <div><img src="/images/LA PASION!!(PLS DON'T STEAL IT OR I'LL COME QND LICK UR TOES WHILE YOU SLEEP___).jpg"></div>
+      <div><img src="/images/Focus.jpg"></div>
+      <div><img src="/images/тг топтышка.jpg"></div>
+      <div><img src="/images/33517b9b-dcd7-4c62-bf8a-fb789c665d54.jpg"></div>
+      <div><img src="/images/e15f9706-d02d-44c4-966c-363a33657b60.jpg"></div>
+    </div>
+  </div>
+</body>
+</html>
