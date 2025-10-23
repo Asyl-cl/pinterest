@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinterest </title>
+  <title>Pinterest</title>
 
   <style>
     * {
@@ -18,6 +18,7 @@
       display: flex;
       min-height: 100vh;
     }
+
     .shetki {
       display: flex;
       flex-direction: column;
@@ -40,6 +41,7 @@
     .shetki img:hover {
       transform: scale(1.1);
     }
+
     .main {
       flex: 1;
       display: flex;
@@ -110,32 +112,95 @@
       color: black;
     }
 
-    .grid-container {
-      columns: 6 220px; 
-      column-gap: 15px;
-      padding: 15px 30px;
-    }
 
-    .grid-container div {
-      display: inline-block;
-      width: 100%;
-      margin-bottom: 15px;
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
+   .grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 15px;
+  padding: 15px 30px;
+  grid-auto-rows: 10px; 
+  grid-auto-flow: dense;
+}
 
-    .grid-container div:hover {
-      transform: scale(1.02);
-    }
+.grid-container div {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
 
-    .grid-container img {
-      width: 100%;
-      border-radius: 16px;
-      display: block;
-    }
+.grid-container div:hover {
+  transform: scale(1.02);
+}
+
+.grid-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.save-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e60023; 
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 2;
+}
+
+.save-btn:hover {
+  background-color: #ad081b;
+  transform: scale(1.05);
+}
+
+.grid-container div:hover .save-btn {
+  opacity: 1;
+}
+
+
+
+.img1 { grid-row: span 25; width: 250px; }
+.img2 { grid-row: span 18; width: 300px; }
+.img3 { grid-row: span 15; width: 300px; }
+.img4 { grid-row: span 10; width: 400px; }
+.img5 { grid-row: span 14; width: 350px; }
+.img6 { grid-row: span 25; width: 250px; }
+.img7 { grid-row: span 22; }
+.img8 { grid-row: span 10; }
+.img9 { grid-row: span 19; }
+.img10 { grid-row: span 24; }
+.img11 { grid-row: span 21; }
+.img12 { grid-row: span 22; }
+.img13 { grid-row: span 19; }
+.img14 { grid-row: span 23; }
+.img15 { grid-row: span 23; }
+.img16 { grid-row: span 17; }
+.img17 { grid-row: span 10; }
+.img18 { grid-row: span 24; }
+.img19 { grid-row: span 10; }
+.img20 { grid-row: span 12; }
+.img21 { grid-row: span 10; }
+.img22 { grid-row: span 20; }
+.img23 { grid-row: span 26; }
+.img24 { grid-row: span 21; }
+.img25 { grid-row: span 24; }
+.img26 { grid-row: span 14; }
+.img27 { grid-row: span 20; }
+.img28 { grid-row: span 28; }
+.img29 { grid-row: span 25; }
+.img30 { grid-row: span 20; }
+.img31 { grid-row: span 17; }
+
   </style>
 </head>
 
@@ -148,6 +213,7 @@
     <img src="/images/photo_2025-10-23_01-16-11.jpg" class="chat">
     <img src="/images/photo_2025-10-23_01-16-26.jpg" class="settings">
   </div>
+
   <div class="main">
     <div class="header2">
       <button>
@@ -164,28 +230,38 @@
     </div>
 
     <div class="grid-container">
-      <div><img src="/images/6ea89b54-51f4-4837-96da-b806d369170b.jpg"></div>
-      <div><img src="/images/32f7c5a8-4643-47f3-a8b3-45b2cc74fbc7.jpg"></div>
-      <div><img src="/images/dexter silly.jpg"></div>
-      <div><img src="/images/Чокан Валиханов.jpg"></div>
-      <div><img src="/images/I am the rage bait.jpg"></div>
-      <div><img src="/images/c115c8f0-a6ad-4f50-9178-007963d5990c.jpg"></div>
-      <div><img src="/images/ed69dafb-d357-4fc6-9904-8cde6c2a227a.jpg"></div>
-      <div><img src="/images/How to Add Rim Light With Gradient Map _ Photoshop Tutorial.jpg"></div>
-      <div><img src="/images/Legion.jpg"></div>
-      <div><img src="/images/d9512ef0-c516-4402-9f8d-dc3ef28b30c3.jpg"></div>
-      <div><img src="/images/Бесплатные шрифты.jpg"></div>
-      <div><img src="/images/28b8fbf3-833b-4ddf-979c-535504b0f6cd.jpg"></div>
-      <div><img src="/images/anonymous _ black & white _.jpg"></div>
-      <div><img src="/images/How to Build Meaningful Relationships Through Online Dating.jpg"></div>
-      <div><img src="/images/Alash Orda _ Kazakhstan.jpg"></div>
-      <div><img src="/images/Autumn Poster Design — COZY TIME.jpg"></div>
-      <div><img src="/images/193c85a0-b087-4aa3-b8cd-1b9812c531bb.jpg"></div>
-      <div><img src="/images/LA PASION!!(PLS DON'T STEAL IT OR I'LL COME QND LICK UR TOES WHILE YOU SLEEP___).jpg"></div>
-      <div><img src="/images/Focus.jpg"></div>
-      <div><img src="/images/тг топтышка.jpg"></div>
-      <div><img src="/images/33517b9b-dcd7-4c62-bf8a-fb789c665d54.jpg"></div>
-      <div><img src="/images/e15f9706-d02d-44c4-966c-363a33657b60.jpg"></div>
+      <div class="img1"><img src="/images/6ea89b54-51f4-4837-96da-b806d369170b.jpg">
+      <button class="save-btn">Сохранить</button>
+    </div>
+      <div class="img2"><img src="/images/32f7c5a8-4643-47f3-a8b3-45b2cc74fbc7.jpg"></div>
+      <div class="img3"><img src="/images/dexter silly.jpg"></div>
+      <div class="img4"><img src="/images/Чокан Валиханов.jpg"></div>
+      <div class="img5"><img src="/images/I am the rage bait.jpg"></div>
+      <div class="img7"><img src="/images/ed69dafb-d357-4fc6-9904-8cde6c2a227a.jpg"></div>
+      <div class="img8"><img src="/images/How to Add Rim Light With Gradient Map _ Photoshop Tutorial.jpg"></div>
+      <div class="img9"><img src="/images/Legion.jpg"></div>
+      <div class="img10"><img src="/images/d9512ef0-c516-4402-9f8d-dc3ef28b30c3.jpg"></div>
+      <div class="img11"><img src="/images/Бесплатные шрифты.jpg"></div>
+      <div class="img12"><img src="/images/28b8fbf3-833b-4ddf-979c-535504b0f6cd.jpg"></div>
+      <div class="img13"><img src="/images/anonymous _ black & white _.jpg"></div>
+      <div class="img14"><img src="/images/How to Build Meaningful Relationships Through Online Dating.jpg"></div>
+      <div class="img15"><img src="/images/Alash Orda _ Kazakhstan.jpg"></div>
+      <div class="img16"><img src="/images/Autumn Poster Design — COZY TIME.jpg"></div>
+      <div class="img17"><img src="/images/193c85a0-b087-4aa3-b8cd-1b9812c531bb.jpg"></div>
+      <div class="img18"><img src="/images/LA PASION!!(PLS DON'T STEAL IT OR I'LL COME QND LICK UR TOES WHILE YOU SLEEP___).jpg"></div>
+      <div class="img19"><img src="/images/Focus.jpg"></div>
+      <div class="img20"><img src="/images/тг топтышка.jpg"></div>
+      <div class="img21"><img src="/images/33517b9b-dcd7-4c62-bf8a-fb789c665d54.jpg"></div>
+      <div class="img22"><img src="/images/e15f9706-d02d-44c4-966c-363a33657b60.jpg"></div>
+      <div class="img23"><img src="/images/6f6aa566-124a-4d28-8c17-b4dcb725976d.jpg"></div>
+      <div class="img24"><img src="/images/53c808ca-0063-435f-9ad4-105e4f8b7273.jpg"></div>
+      <div class="img25"><img src="/images/test.jpg"></div>
+      <div class="img26"><img src="/images/poster design.jpg"></div>
+      <div class="img27"><img src="/images/https___t_me_pearl0fdeath.jpg"></div>
+      <div class="img28"><img src="/images/Wally West.jpg"></div>
+      <div class="img29"><img src="/images/39698781-3ead-4b14-b518-c809bc1d4c08.jpg"></div>
+      <div class="img30"><img src="/images/eaea33fe-9ecf-4bfa-a605-295a35f8c6e4.jpg"></div>
+      <div class="img31"><img src="/images/e2fe9f76-8dce-4e35-aa9b-447804f9bc87.jpg"></div>
     </div>
   </div>
 </body>
